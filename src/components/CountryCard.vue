@@ -39,14 +39,14 @@ const numLocale = 'en-US'
     }
 
     .details {
-        padding-block: 1vw 2.5vw;
-        padding-inline: 2vw;
+        padding-block: 1vw 2vw;
+        padding-inline: 1.5vw;
         width: 100%;
 
         h4 {
             padding-bottom: 0.5vw;
             font-weight: 800;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         p {
