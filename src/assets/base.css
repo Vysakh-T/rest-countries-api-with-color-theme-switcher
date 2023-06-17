@@ -22,10 +22,10 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Dark Mode */
-    --color-background: var(--very-dark-blue-1);
+    /* --color-background: var(--very-dark-blue-1);
     --color-text: var(--white);
     --color-elements: var(--dark-blue);
-    --color-input: var(--very-light-gray);
+    --color-input: var(--very-light-gray); */
   }
 }
 
