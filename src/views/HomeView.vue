@@ -1,6 +1,8 @@
 <script setup>
 import HeaderVue from '../components/Header.vue';
 import CountryCardVue from '../components/CountryCard.vue';
+import SearchBoxVue from '../components/SearchBox.vue';
+import FilterDropDownVue from '../components/FilterDropDown.vue';
 import { useCountriesStore } from '@/stores/countries';
 
 const countriesStore = useCountriesStore()
@@ -10,9 +12,13 @@ const { data } = countriesStore
 <template>
   <HeaderVue />
   <main>
+    <nav>
+      <SearchBoxVue />
+      <FilterDropDownVue />
+    </nav>
     <section>
-      <CountryCardVue :name="i.name" :population="i.population" :region="i.region" :capital="i.capital" :flag-link="i?.flags.svg || i?.flag"
-        v-for="i in data" />
+      <CountryCardVue :name="i.name" :population="i.population" :region="i.region" :capital="i.capital"
+        :flag-link="i?.flags.svg || i?.flag" v-for="i in data" />
     </section>
   </main>
 </template>
@@ -20,6 +26,12 @@ const { data } = countriesStore
 <style lang="scss" scoped>
 main {
   padding: 4vh 5vw;
+
+  nav {
+    margin-bottom: 4vh;
+    display: flex;
+    justify-content: space-between;
+  }
 
   section {
     display: grid;
