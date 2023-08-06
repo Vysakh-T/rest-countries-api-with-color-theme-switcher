@@ -12,7 +12,7 @@ const numLocale = 'en-US'
 
 <template>
     <div class="card">
-        <img :src="flagLink" :alt="'Flag of ' + props.name" draggable="false"/>
+        <img :src="flagLink" :alt="'Flag of ' + props.name" draggable="false" />
         <div class="details">
             <h4>
                 {{ props.name }}
@@ -25,12 +25,21 @@ const numLocale = 'en-US'
 </template>
 
 <style lang="scss" scoped>
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0px 15px 0px rgba(0, 0, 0, 0.2);
+    transition: all ease-in-out 0.15s;
+    outline: solid 1px rgba(0, 0, 0, 0.2);
+}
+
 .card {
     background: var(--color-elements);
+    color: var(--color-text);
     width: 100%;
     box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     overflow: hidden;
+    cursor: default;
 
     img {
         width: 100%;

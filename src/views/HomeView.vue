@@ -17,8 +17,10 @@ const { data } = countriesStore
       <FilterDropDownVue />
     </nav>
     <section>
-      <CountryCardVue :name="i.name" :population="i.population" :region="i.region" :capital="i.capital"
-        :flag-link="i?.flags.svg || i?.flag" v-for="i in data" />
+      <router-link tag="div" :to="{ name: 'country', params: { country: i.name } }" v-for="i in data">
+        <CountryCardVue :name="i.name" :population="i.population" :region="i.region" :capital="i.capital"
+          :flag-link="i?.flags.svg || i?.flag" />
+      </router-link>
     </section>
   </main>
 </template>
